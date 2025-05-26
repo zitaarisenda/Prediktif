@@ -151,16 +151,19 @@ Tahap evaluasi ini bertujuan menilai seberapa baik model yang dibangun mampu mem
 Karena target prediksi berupa klasifikasi multikelas terhadap skor performa karyawan (performance_score), digunakan metrik evaluasi berikut:
 
 1. Accuracy: Persentase jumlah prediksi yang benar terhadap total seluruh prediksi.
+   Formula:
 ![](https://raw.githubusercontent.com/zitaarisenda/Prediktif/main/Screenshot%202025-05-26%20211702.png)
 
 2. Precision: Seberapa banyak prediksi positif yang benar dari total prediksi positif yang dibuat oleh model.
+   Formula:
 ​![](https://raw.githubusercontent.com/zitaarisenda/Prediktif/main/Screenshot%202025-05-26%20211712.png)
 
 3. Recall: Seberapa banyak kasus positif yang benar-benar dapat dideteksi oleh model.
+   Formula:
 ![](https://raw.githubusercontent.com/zitaarisenda/Prediktif/main/Screenshot%202025-05-26%20211722.png)
 
 4. F1-Score: Harmonic mean dari precision dan recall.
-   
+   Formula:
 ![](https://raw.githubusercontent.com/zitaarisenda/Prediktif/main/Screenshot%202025-05-26%20211732.png)
 
 5. Confusion Matrix: Matriks yang menunjukkan perbandingan antara prediksi model dengan label sebenarnya.
