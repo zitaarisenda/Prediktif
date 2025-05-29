@@ -55,7 +55,7 @@ Berikut adalah daftar fitur (variabel) yang tersedia dalam dataset:
 - Team_Size: Ukuran tim tempat karyawan bekerja.
 - Training_Hours: Jumlah jam pelatihan yang diikuti.
 - Promotions: Jumlah promosi yang telah diterima karyawan.
-- Employee_Satisfaction_Score: Skor kepuasan karyawan terhadap pekerjaannya.
+- Employee_Satisfaction_Score: Skor kepuasan karyawan.
 - Resigned: Status apakah karyawan telah mengundurkan diri.
 
 ### Eksplorasi Data dan Visualisasi
