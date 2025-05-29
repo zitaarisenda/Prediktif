@@ -106,7 +106,7 @@ Pada tahap ini, dilakukan beberapa langkah data preparation yang penting untuk m
 Pada tahap ini, dilakukan pembangunan model machine learning untuk memprediksi skor kinerja karyawan berdasarkan data historis dan atribut-atribut. Dua algoritma digunakan dan dibandingkan performanya: Decision Tree Classifier dan Random Forest Classifier.
 
 ### Decision Tree Classifier
-Decision Tree bekerja dengan membagi data secara rekursif berdasarkan fitur yang paling memisahkan target.Pembagian ini dilakukan menggunakan Gini impurity, yang merupakan metode default untuk mengukur kualitas pemisahan dalam algoritma Decision Tree dan Random Forest di scikit-learn. Pada setiap simpul, algoritma memilih fitur terbaik dan titik potong terbaik untuk memisahkan data. Proses ini berlangsung hingga tidak ada lagi informasi yang bisa dipisahkan.
+Decision Tree bekerja dengan membagi data secara rekursif berdasarkan fitur yang paling memisahkan target. Pembagian ini dilakukan menggunakan Gini impurity, yang merupakan metode default untuk mengukur kualitas pemisahan dalam algoritma Decision Tree di scikit-learn. Pada setiap simpul, algoritma memilih fitur terbaik dan titik potong terbaik untuk memisahkan data. Proses ini berlangsung hingga tidak ada lagi informasi yang bisa dipisahkan.
 
 - Tahapan:
 Model Decision Tree dibangun menggunakan pustaka sklearn.tree.DecisionTreeClassifier.
@@ -128,7 +128,7 @@ Cenderung overfitting pada data latih.
 Sensitif terhadap perubahan kecil pada data.
 
 ### Random Forest Classifier
-Random Forest adalah ensemble learning yang membangun banyak pohon keputusan (dalam proyek ini, 100 pohon) menggunakan data acak (bootstrap). Setiap pohon dilatih dengan subset acak dari fitur dan data, lalu hasil prediksi tiap pohon dikombinasikan. Metode ini efektif untuk menghindari overfitting karena variasi antar pohon dan stabil dalam performa.
+Random Forest adalah ensemble learning yang membangun banyak pohon keputusan (dalam proyek ini, 100 pohon) menggunakan data acak. Setiap pohon dilatih dengan subset acak dari fitur dan data, lalu hasil prediksi tiap pohon dikombinasikan. Metode ini efektif untuk menghindari overfitting karena variasi antar pohon dan stabil dalam performa.
 
 - Tahapan:
 Model Random Forest dibangun menggunakan RandomForestClassifier dari sklearn.ensemble.
