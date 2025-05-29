@@ -32,25 +32,31 @@ Hal ini dilakukan untuk menghindari bias dan memastikan model memiliki generalis
 
 ## Data Understanding
 
-Dataset yang digunakan dalam proyek ini berjudul Extended Employee Performance and Productivity Data, yang dapat diunduh melalui tautan berikut: https://www.kaggle.com/datasets/mexwell/employee-performance-and-productivity-data/data
+Dataset yang digunakan dalam proyek ini berjudul Extended Employee Performance and Productivity Data, dengan 100000 baris dan 20 kolom, yang dapat diunduh melalui tautan berikut: https://www.kaggle.com/datasets/mexwell/employee-performance-and-productivity-data/data
 Dataset ini berisi informasi terkait karakteristik dan produktivitas karyawan, serta skor kinerja mereka. Tujuan dari penggunaan dataset ini adalah untuk memahami pola-pola yang berkontribusi terhadap performa kerja dan selanjutnya membangun model prediktif untuk mengklasifikasikan skor kinerja karyawan.
 
 ### Variabel pada Dataset
 Berikut adalah daftar fitur (variabel) yang tersedia dalam dataset:
-- Employee_ID: ID unik dari setiap karyawan
+- Employee_ID: ID unik dari setiap karyawan.
 - Department: Departemen tempat karyawan bekerja.
-- Job_Title: Jabatan atau posisi karyawan.
 - Gender: Jenis kelamin karyawan.
-- Age: Usia karyawan dalam tahun.
+- Age: Usia karyawan.
+- Job_Title: Jabatan atau posisi pekerjaan karyawan.
+- Hire_Date: Tanggal mulai bekerja di perusahaan.
+- Years_At_Company: Lama bekerja di perusahaan dalam tahun.
 - Education_Level: Tingkat pendidikan terakhir yang diselesaikan.
-- Hire_Date: Tanggal perekrutan karyawan.
-- Annual_Training_Hours: Total jam pelatihan tahunan yang diikuti karyawan.
-- Work_Hours_Per_Week: Rata-rata jam kerja per minggu.
+- Performance_Score: Skor performa kerja karyawan.
 - Monthly_Salary: Gaji bulanan karyawan.
-- Employee_Satisfaction_Score: Skor kepuasan karyawan terhadap pekerjaan.
-- Promotions: Jumlah promosi yang diterima oleh karyawan.
+- Work_Hours_Per_Week: Rata-rata jam kerja per minggu.
+- Projects_Handled: Jumlah proyek yang telah ditangani oleh karyawan.
+- Overtime_Hours: Rata-rata jam lembur.
+- Sick_Days: Jumlah hari sakit yang diambil oleh karyawan.
+- Remote_Work_Frequency: Frekuensi kerja jarak jauh.
+- Team_Size: Ukuran tim tempat karyawan bekerja.
+- Training_Hours: Jumlah jam pelatihan yang diikuti.
+- Promotions: Jumlah promosi yang telah diterima karyawan.
+- Employee_Satisfaction_Score: Skor kepuasan karyawan terhadap pekerjaannya.
 - Resigned: Status apakah karyawan telah mengundurkan diri.
-- Performance_Score: Target variabel yang menunjukkan tingkat performa kerja karyawan.
 
 ### Eksplorasi Data dan Visualisasi
 Beberapa langkah eksplorasi data dilakukan untuk memahami karakteristik data:
@@ -100,6 +106,8 @@ Pada tahap ini, dilakukan beberapa langkah data preparation yang penting untuk m
 Pada tahap ini, dilakukan pembangunan model machine learning untuk memprediksi skor kinerja karyawan berdasarkan data historis dan atribut-atribut. Dua algoritma digunakan dan dibandingkan performanya: Decision Tree Classifier dan Random Forest Classifier.
 
 ### Decision Tree Classifier
+Decision Tree bekerja dengan membagi data secara rekursif berdasarkan fitur yang paling memisahkan target.Pembagian ini dilakukan menggunakan Gini impurity, yang merupakan metode default untuk mengukur kualitas pemisahan dalam algoritma Decision Tree dan Random Forest di scikit-learn. Pada setiap simpul, algoritma memilih fitur terbaik dan titik potong terbaik untuk memisahkan data. Proses ini berlangsung hingga tidak ada lagi informasi yang bisa dipisahkan.
+
 - Tahapan:
 Model Decision Tree dibangun menggunakan pustaka sklearn.tree.DecisionTreeClassifier.
 Model dilatih menggunakan data hasil split (fitur dan target).
@@ -120,6 +128,8 @@ Cenderung overfitting pada data latih.
 Sensitif terhadap perubahan kecil pada data.
 
 ### Random Forest Classifier
+Random Forest adalah ensemble learning yang membangun banyak pohon keputusan (dalam proyek ini, 100 pohon) menggunakan data acak (bootstrap). Setiap pohon dilatih dengan subset acak dari fitur dan data, lalu hasil prediksi tiap pohon dikombinasikan. Metode ini efektif untuk menghindari overfitting karena variasi antar pohon dan stabil dalam performa.
+
 - Tahapan:
 Model Random Forest dibangun menggunakan RandomForestClassifier dari sklearn.ensemble.
 Model ini merupakan ensemble dari beberapa Decision Tree.
