@@ -128,7 +128,7 @@ Cenderung overfitting pada data latih.
 Sensitif terhadap perubahan kecil pada data.
 
 ### Random Forest Classifier
-Random Forest adalah ensemble learning yang membangun banyak pohon keputusan (dalam proyek ini, 100 pohon) menggunakan data acak. Setiap pohon dilatih dengan subset acak dari fitur dan data, lalu hasil prediksi tiap pohon dikombinasikan. Metode ini efektif untuk menghindari overfitting karena variasi antar pohon dan stabil dalam performa.
+Random Forest adalah ensemble learning yang membangun banyak pohon keputusan (dalam proyek ini, 100 pohon) menggunakan data acak(bootstrap). Setiap pohon dilatih dengan subset acak dari fitur dan data, lalu hasil prediksi tiap pohon dikombinasikan. Metode ini efektif untuk menghindari overfitting karena variasi antar pohon dan stabil dalam performa.
 
 - Tahapan:
 Model Random Forest dibangun menggunakan RandomForestClassifier dari sklearn.ensemble.
